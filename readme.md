@@ -1,3 +1,9 @@
+# Anwar Choukah personal website
+
+My website, built on top of Kirby 2 starterkit - edited by [Anwar Choukah](http://anwarchoukah.com).
+
+---
+
 # Kirby Starterkit
 
 Kirby's default theme is the easiest way to get started with Kirby. You get a beautiful little site with three projects and a pre-configured panel.
