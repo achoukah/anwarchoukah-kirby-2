@@ -1,0 +1,350 @@
+// Anwar Choukah personal website - Kirby 2 Starterkit edit
+
+  // Author:        Anwar Choukah
+  // Email:         choukah@me.com
+  // Website:       http://anwarchoukah.com
+
+
+
+
+  // Starterkit / Kirby Default Theme
+
+  // Author:    Bastian Allgeier GmbH
+  // Showcase:  http://default.getkirby.com
+
+// VARIABLES
+
+  // COLOURS
+
+    @red:             #930000;
+    @red-lt:          lighten(@red,10%);
+    @red-dk:          darken(@red,10%);
+
+    @rebecca:         #663399;
+    @rebecca-lt:      lighten(@rebecca,20%);
+    @rebecca-dk:      darken(@rebecca,20%);
+
+    @grey:            #666666;
+    @grey-lt:         lighten(@grey,20%);
+    @grey-dk:         darken(@grey,20%);
+
+    @black:           #333333;
+    @black-lt:        lighten(@black,10%);
+    @black-dk:        darken(@black,20%);
+
+    @white:           #eeeeee;
+    @white-lt:        #ffffff;
+    @white-dk:        #dddddd;
+
+
+  // FONTS 
+
+    @headline:        Open Sans Condensed, serif;
+    @bodytext:        Playfair Display, sans-serif;
+    @codefont:        Inconsolata, sans-serif;
+    @icomoon:         icomoon, sans-serif;
+
+
+  // SUPERVARIABLES
+
+    @border-colour:   @grey-dk;
+    @bg-colour:       @white;
+    @text-colour:     @black-lt;
+
+    @link:            @red;
+    @link-hover:      @red-lt;
+    @link-active:     @red-dk;
+
+// RESET
+  *, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, main, nav, section, summary {
+    display: block;
+  }
+  ol, ul {
+    list-style: none;
+  }
+
+// FONTS
+  @font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?7r4r6y');
+    src:url('fonts/icomoon.eot?#iefix7r4r6y') format('embedded-opentype'),
+      url('fonts/icomoon.woff?7r4r6y') format('woff'),
+      url('fonts/icomoon.ttf?7r4r6y') format('truetype'),
+      url('fonts/icomoon.svg?7r4r6y#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// SITE
+
+  html {
+    height: 101%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 50em;
+    box-sizing: inherit;
+    background: @bg-colour;
+    color: @text-colour;
+    font-family: @bodytext;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+// HEADER
+
+  header {
+    border-bottom: 2px solid red;
+  }
+  .branding {
+    float: left;
+    margin-bottom: 1.5em;
+  }
+
+// NAVIGATION
+
+  .menu {
+    float: right;
+  }
+
+  .menu a {
+    display: block;
+    color: #222;
+  }
+  .menu a:hover {
+    color: red;
+    text-decoration: none;
+  }
+  .menu .active {
+    color: red;
+  }
+
+  .menu > li {
+    float: left;
+    position: relative;
+    margin-left: 2em;
+  }
+    .menu > li:hover ul {
+      display: block;
+    }
+    .menu > li > a {
+      font-weight: 600;
+      padding: .75em 0 1em;
+    }
+
+  .submenu {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-top: none;
+  }
+  .submenu:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: -10px;
+    left: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #222;
+  }
+  .submenu li {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
+  .submenu a {
+    font-weight: normal;
+    padding: .5em 1.5em;
+    font-size: .9em;
+    font-weight: 300;
+    color: #fff;
+    background-color: #222;
+    white-space: nowrap;
+  }
+  .submenu a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+// LINKS
+
+  a {
+    transition: all .2s;
+    color: @link;
+    text-decoration: none;
+  }
+  a:hover {
+    color: @link-hover;
+  }
+
+  a:active{
+    color: @link-active;
+  }
+
+// HEADINGS
+  header{
+    h1 {
+      font-size: 2em;
+      line-height: 1.25em;
+      font-weight: 400;
+      margin-bottom: .5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      line-height: 1.25em;
+      font-weight: 300;
+      margin-bottom: .5em;
+      color: red;
+    }
+  }
+  h3 {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-bottom: .5em;
+  }
+  h4 {
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+    color: red;
+  }
+  h1 a, h2 a, h3 a, h4 a {
+    color: inherit;
+  }
+
+// BUTTONS
+
+  .btn {
+    display: inline-block;
+    line-height: 1em;
+    font-weight: 600;
+    color: #222;
+  }
+
+// MAIN
+
+  main {
+    margin: 1.5em 0 3em;
+  }
+  main p {
+    margin-bottom: 1em;
+  }
+  main img {
+    margin-bottom: 20px;
+  }
+  section {
+    margin-top: 3em;
+    padding-top: 3em;
+    border-top: 2px solid #ddd;
+  }
+
+// PROJECT META
+
+  .meta {
+    width: 100%;
+    margin: 0 0 1em 0;
+  }
+  .meta li {
+    float: left;
+    margin-right: 2em;
+    color: red;
+  }
+  .meta li b {
+    font-weight: 400;
+    color: #000;
+    padding-right: .25em;
+  }
+
+// PROJECT TEASER
+
+  .teaser {
+    list-style: none;
+    margin-left: 0;
+  }
+  .teaser li {
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+  }
+  .teaser li:first-child {
+    margin-left: 0;
+  }
+  .teaser a {
+    color: red;
+  }
+
+// NEXTPREV NAV
+
+  .nextprev {
+    padding: 1em 0;
+  }
+  .nextprev .prev {
+    float: left;
+  }
+  .nextprev .next {
+    float: right;
+  }
+
+// FOOTER
+
+  footer {
+  padding: 1em 0 6em;
+  font-size: .8em;
+  color: #222;
+  border-top: 2px solid red;
+  }
+
+// PIX
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+// CLEARFIX
+
+  .cf:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+// MEDIA QUERIES
+
+  @import "lightbox.less";
+
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    @import "style-mobile.less";
+  }
+
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px) {
+    @import "style-tablet.less";
+  }  
+
+  // remove Mobile Test
+  @media only screen and (max-width : 37rem) {
+    @import "style-small.less";
+  }
+
+

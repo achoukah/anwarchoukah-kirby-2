@@ -1,202 +1,192 @@
-/***************************************************
-
-****** Starterkit / Kirby Default Theme ******
-
-*** Author:    Bastian Allgeier GmbH
-*** Showcase:  http://default.getkirby.com
-
-****************************************************/
-
-
-/*
- :::  Reset
--------------------------------------------------- */
-*, *:before, *:after {
+/* line 59, main.less */
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, nav, section, summary {
+/* line 65, main.less */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
-ol, ul {
+/* line 69, main.less */
+ol,
+ul {
   list-style: none;
 }
-
-
-
-/*
- :::  Site
--------------------------------------------------- */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?7r4r6y');
+  src: url('fonts/icomoon.eot?#iefix7r4r6y') format('embedded-opentype'), url('fonts/icomoon.woff?7r4r6y') format('woff'), url('fonts/icomoon.ttf?7r4r6y') format('truetype'), url('fonts/icomoon.svg?7r4r6y#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 87, main.less */
 html {
   height: 101%;
-  font-family: 'Source Sans Pro', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+/* line 93, main.less */
 body {
   margin: 0 auto;
   font-size: 18px;
-  line-height: 1.5em;
-  padding: 3em;
+  line-height: 1.5;
   max-width: 50em;
-  background: #fff;
-  color: #222;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  background: #eeeeee;
+  color: #4d4d4d;
+  font-family: Playfair Display, sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
-
-
-
-/*
- :::  Header
--------------------------------------------------- */
+/* line 109, main.less */
 header {
   border-bottom: 2px solid red;
 }
+/* line 112, main.less */
 .branding {
   float: left;
   margin-bottom: 1.5em;
 }
-
-
-
-/*
- :::  Navigation
--------------------------------------------------- */
+/* line 119, main.less */
 .menu {
   float: right;
 }
-
+/* line 123, main.less */
 .menu a {
   display: block;
   color: #222;
 }
-  .menu a:hover {
-    color: red;
-    text-decoration: none;
-  }
-  .menu .active {
-    color: red;
-  }
-
+/* line 127, main.less */
+.menu a:hover {
+  color: red;
+  text-decoration: none;
+}
+/* line 131, main.less */
+.menu .active {
+  color: red;
+}
+/* line 135, main.less */
 .menu > li {
   float: left;
   position: relative;
   margin-left: 2em;
 }
-  .menu > li:hover ul {
-    display: block;
-  }
-  .menu > li > a {
-    font-weight: 600;
-    padding: .75em 0 1em;
-  }
-
+/* line 140, main.less */
+.menu > li:hover ul {
+  display: block;
+}
+/* line 143, main.less */
+.menu > li > a {
+  font-weight: 600;
+  padding: .75em 0 1em;
+}
+/* line 148, main.less */
 .submenu {
   position: absolute;
   z-index: 999;
   display: none;
   border-top: none;
 }
-  .submenu:before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    top: -10px;
-    left: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #222;
-  }
-  .submenu li {
-    float: left;
-    width: 100%;
-    border-bottom: 1px solid #444;
-  }
-    .submenu a {
-      font-weight: normal;
-      padding: .5em 1.5em;
-      font-size: .9em;
-      font-weight: 300;
-      color: #fff;
-      background-color: #222;
-      white-space: nowrap;
-    }
-    .submenu a:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-@media screen and (max-width: 40em) {
-  body {
-    padding: 1.5em;
-  }
-  .menu {
-    float: left;
-    width: 100%;
-  }
-  .menu > li {
-    margin-left: 0;
-    width: 100%;
-    margin: 0;
-  }
-  .menu > li > a {
-    padding: .5em 0;
-    border-top: 1px solid #ddd;
-  }
-  .submenu {
-    display: block;
-    position: relative;
-  }
+/* line 154, main.less */
+.submenu:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: -10px;
+  left: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #222;
 }
-
-
-
-/*
- :::  Links
--------------------------------------------------- */
+/* line 164, main.less */
+.submenu li {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #444;
+}
+/* line 169, main.less */
+.submenu a {
+  font-weight: normal;
+  padding: .5em 1.5em;
+  font-size: .9em;
+  font-weight: 300;
+  color: #fff;
+  background-color: #222;
+  white-space: nowrap;
+}
+/* line 178, main.less */
+.submenu a:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* line 185, main.less */
 a {
-  color: #222;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: #930000;
   text-decoration: none;
-  transition: color .3s, background .3s, border .3s;
 }
+/* line 190, main.less */
 a:hover {
-  color: red;
+  color: #c60000;
 }
-.text a {
-  border-bottom: 2px solid #ddd;
+/* line 194, main.less */
+a:active {
+  color: #600000;
 }
-.text a:hover {
-  border-color: #222;
-}
-
-
-
-/*
- :::  Headings
--------------------------------------------------- */
-h1 {
+/* line 200, main.less */
+header h1 {
   font-size: 2em;
   line-height: 1.25em;
   font-weight: 400;
   margin-bottom: .5em;
 }
-h2 {
+/* line 207, main.less */
+header h2 {
   font-size: 2em;
   line-height: 1.25em;
   font-weight: 300;
   margin-bottom: .5em;
   color: red;
 }
+/* line 215, main.less */
 h3 {
   font-size: 1.4em;
   line-height: 1.5em;
   font-weight: 400;
   margin-bottom: .5em;
 }
+/* line 221, main.less */
 h4 {
   font-size: 1.125em;
   font-weight: 600;
@@ -204,132 +194,99 @@ h4 {
   margin-bottom: .5em;
   color: red;
 }
-h1 a, h2 a, h3 a, h4 a {
+/* line 228, main.less */
+h1 a,
+h2 a,
+h3 a,
+h4 a {
   color: inherit;
 }
-
-
-
-/*
- :::  Buttons
--------------------------------------------------- */
+/* line 234, main.less */
 .btn {
   display: inline-block;
   line-height: 1em;
   font-weight: 600;
   color: #222;
 }
-
-
-
-/*
- :::  Main
--------------------------------------------------- */
+/* line 243, main.less */
 main {
   margin: 1.5em 0 3em;
 }
+/* line 246, main.less */
 main p {
   margin-bottom: 1em;
 }
+/* line 249, main.less */
 main img {
   margin-bottom: 20px;
 }
+/* line 252, main.less */
 section {
   margin-top: 3em;
   padding-top: 3em;
   border-top: 2px solid #ddd;
 }
-
-
-
-/*
- :::  Project meta
--------------------------------------------------- */
+/* line 260, main.less */
 .meta {
   width: 100%;
   margin: 0 0 1em 0;
 }
+/* line 264, main.less */
 .meta li {
   float: left;
   margin-right: 2em;
   color: red;
 }
+/* line 269, main.less */
 .meta li b {
   font-weight: 400;
   color: #000;
   padding-right: .25em;
 }
-
-
-
-/*
- :::  Project teaser
--------------------------------------------------- */
+/* line 277, main.less */
 .teaser {
   list-style: none;
   margin-left: 0;
 }
+/* line 281, main.less */
 .teaser li {
   float: left;
   width: 30%;
   margin-left: 5%;
 }
+/* line 286, main.less */
 .teaser li:first-child {
   margin-left: 0;
 }
+/* line 289, main.less */
 .teaser a {
   color: red;
 }
-@media screen and (max-width: 750px) {
-  .teaser li {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 1.5em;
-  }
-}
-
-
-
-/*
- :::  Nextprev nav
--------------------------------------------------- */
+/* line 295, main.less */
 .nextprev {
   padding: 1em 0;
 }
+/* line 298, main.less */
 .nextprev .prev {
   float: left;
 }
+/* line 301, main.less */
 .nextprev .next {
   float: right;
 }
-
-
-
-/*
- :::  Footer
--------------------------------------------------- */
+/* line 307, main.less */
 footer {
   padding: 1em 0 6em;
   font-size: .8em;
   color: #222;
   border-top: 2px solid red;
 }
-
-
-
-/*
- :::  Pix
--------------------------------------------------- */
+/* line 316, main.less */
 img {
   display: block;
   max-width: 100%;
 }
-
-
-
-/*
- :::  Clearfix
--------------------------------------------------- */
+/* line 323, main.less */
 .cf:after {
   content: "";
   display: table;
