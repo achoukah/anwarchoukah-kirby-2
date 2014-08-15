@@ -36,14 +36,12 @@
     @white-lt:        #ffffff;
     @white-dk:        #dddddd;
 
-
   // FONTS 
 
     @headline:        Open Sans Condensed, serif;
     @bodytext:        Playfair Display, sans-serif;
     @codefont:        Inconsolata, sans-serif;
     @icomoon:         icomoon, sans-serif;
-
 
   // SUPERVARIABLES
 
@@ -94,94 +92,16 @@
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.5;
-    max-width: 50em;
     box-sizing: inherit;
+
     background: @bg-colour;
     color: @text-colour;
     font-family: @bodytext;
+
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-
-// HEADER
-
-  header {
-    border-bottom: 2px solid red;
-  }
-  .branding {
-    float: left;
-    margin-bottom: 1.5em;
-  }
-
-// NAVIGATION
-
-  .menu {
-    float: right;
-  }
-
-  .menu a {
-    display: block;
-    color: #222;
-  }
-  .menu a:hover {
-    color: red;
-    text-decoration: none;
-  }
-  .menu .active {
-    color: red;
-  }
-
-  .menu > li {
-    float: left;
-    position: relative;
-    margin-left: 2em;
-  }
-    .menu > li:hover ul {
-      display: block;
-    }
-    .menu > li > a {
-      font-weight: 600;
-      padding: .75em 0 1em;
-    }
-
-  .submenu {
-    position: absolute;
-    z-index: 999;
-    display: none;
-    border-top: none;
-  }
-  .submenu:before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    top: -10px;
-    left: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #222;
-  }
-  .submenu li {
-    float: left;
-    width: 100%;
-    border-bottom: 1px solid #444;
-  }
-  .submenu a {
-    font-weight: normal;
-    padding: .5em 1.5em;
-    font-size: .9em;
-    font-weight: 300;
-    color: #fff;
-    background-color: #222;
-    white-space: nowrap;
-  }
-  .submenu a:hover {
-    background-color: #333;
-    color: #fff;
-  }
-
-// LINKS
-
   a {
     transition: all .2s;
     color: @link;
@@ -195,11 +115,132 @@
     color: @link-active;
   }
 
+// HEADER
+
+  header {
+    background-color: @grey-dk;
+    padding: 2rem 0;
+    color: @grey-lt;
+
+    h1, h2{
+      width: 50rem;
+      margin: 1rem auto;
+      display: block;
+    }
+    h1{
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+      a{
+        margin: 0;
+        width: auto;
+        display: inline-block;
+      }
+      a:hover{
+        color: @white-dk;
+      }
+      a::before, a::after{
+        width: 100%+2rem;
+        clear: both;
+        opacity: 0;
+        border-top: medium solid @grey;
+        display: block;
+        content: '';
+        transition: all .2s ease-in-out;
+        margin: 0 -1rem;
+      }
+      a::before{
+        transform: translateY(-2rem);
+      }
+      a::after{
+        transform: translateY(2rem);
+      }
+      a:hover::before, a:hover::after{
+        opacity: 1;
+      }
+      a:hover::before{
+        transform: translateY(2.8rem);
+      }
+      a:hover::after{
+        transform: translateY(-2.6rem);
+      }
+    }
+    h2{
+      font-size: 1.5rem;
+    }
+  }
+  .branding {
+    float: left;
+    margin-bottom: 1.5rem;
+  }
+
+// NAVIGATION
+
+  .menu {
+    width: 50rem;
+    margin: auto;
+    font-family: @headline;
+    font-size: 1.3rem;
+    padding: .75rem 0;
+    
+    a {
+      display: block;
+      color: inherit;
+    }
+    a:hover {
+      color: @white-lt;
+    }
+    .active {
+      color: @white-dk;
+    }
+    .active::before{
+      content: '\e60b';
+      font-family: @icomoon;
+      line-height: 0;
+      position: relative;
+      top: .2rem;
+      border: none;
+    }
+  }
+  .menu > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 2rem;
+  }
+  .menu > li:hover ul {
+    display: block;
+  }
+  .submenu {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-top: none;
+    box-shadow: 0 0 .3rem -.1rem @black;
+
+    li {
+      float: left;
+      width: 100%;
+      border-bottom: thin solid @black-lt;
+    }
+    a {
+      font-weight: normal;
+      padding: .5rem 1.5rem;
+      font-size: .95rem;
+      font-weight: 300;
+      color: @white-dk;
+      background-color: @black;
+      white-space: nowrap;
+    }
+    a:hover {
+      background-color: @black-dk;
+      color: @white;
+    }
+  }
+
 // HEADINGS
 
   h1 {
-    font-size: 2em;
-    line-height: 1.25em;
+    font-size: 2rem;
+    line-height: 1.25rem;
     font-weight: 400;
     margin-bottom: .5em;
     font-family: @headline;
@@ -209,7 +250,6 @@
     line-height: 1.25em;
     font-weight: 300;
     margin-bottom: .5em;
-    color: red;
     font-family: @headline;
   }
   h3 {
@@ -224,7 +264,6 @@
     font-weight: 600;
     line-height: 1.5em;
     margin-bottom: .5em;
-    color: red;
   }
   h1 a, h2 a, h3 a, h4 a {
     color: inherit;
@@ -243,6 +282,7 @@
 
   main {
     margin: 1.5em 0 3em;
+    flex: 1;
   }
   main p {
     margin-bottom: 1em;

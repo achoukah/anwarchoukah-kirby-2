@@ -45,7 +45,6 @@ body {
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.5;
-  max-width: 50em;
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
@@ -63,73 +62,6 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-header {
-  border-bottom: 2px solid red;
-}
-.branding {
-  float: left;
-  margin-bottom: 1.5em;
-}
-.menu {
-  float: right;
-}
-.menu a {
-  display: block;
-  color: #222;
-}
-.menu a:hover {
-  color: red;
-  text-decoration: none;
-}
-.menu .active {
-  color: red;
-}
-.menu > li {
-  float: left;
-  position: relative;
-  margin-left: 2em;
-}
-.menu > li:hover ul {
-  display: block;
-}
-.menu > li > a {
-  font-weight: 600;
-  padding: .75em 0 1em;
-}
-.submenu {
-  position: absolute;
-  z-index: 999;
-  display: none;
-  border-top: none;
-}
-.submenu:before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: -10px;
-  left: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #222;
-}
-.submenu li {
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid #444;
-}
-.submenu a {
-  font-weight: normal;
-  padding: .5em 1.5em;
-  font-size: .9em;
-  font-weight: 300;
-  color: #fff;
-  background-color: #222;
-  white-space: nowrap;
-}
-.submenu a:hover {
-  background-color: #333;
-  color: #fff;
-}
 a {
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -142,9 +74,134 @@ a:hover {
 a:active {
   color: #600000;
 }
+header {
+  background-color: #333333;
+  padding: 2rem 0;
+  color: #999999;
+}
+header h1,
+header h2 {
+  width: 50rem;
+  margin: 1rem auto;
+  display: block;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+header h1 a {
+  margin: 0;
+  width: auto;
+  display: inline-block;
+}
+header h1 a:hover {
+  color: #dddddd;
+}
+header h1 a::before,
+header h1 a::after {
+  width: 100%+2rem;
+  clear: both;
+  opacity: 0;
+  border-top: medium solid #666666;
+  display: block;
+  content: '';
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 0 -1rem;
+}
+header h1 a::before {
+  -webkit-transform: translateY(-2rem);
+  -ms-transform: translateY(-2rem);
+  transform: translateY(-2rem);
+}
+header h1 a::after {
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+}
+header h1 a:hover::before,
+header h1 a:hover::after {
+  opacity: 1;
+}
+header h1 a:hover::before {
+  -webkit-transform: translateY(2.8rem);
+  -ms-transform: translateY(2.8rem);
+  transform: translateY(2.8rem);
+}
+header h1 a:hover::after {
+  -webkit-transform: translateY(-2.6rem);
+  -ms-transform: translateY(-2.6rem);
+  transform: translateY(-2.6rem);
+}
+header h2 {
+  font-size: 1.5rem;
+}
+.branding {
+  float: left;
+  margin-bottom: 1.5rem;
+}
+.menu {
+  width: 50rem;
+  margin: auto;
+  font-family: Open Sans Condensed, serif;
+  font-size: 1.3rem;
+  padding: .75rem 0;
+}
+.menu a {
+  display: block;
+  color: inherit;
+}
+.menu a:hover {
+  color: #ffffff;
+}
+.menu .active {
+  color: #dddddd;
+}
+.menu .active::before {
+  content: '\e60b';
+  font-family: icomoon, sans-serif;
+  line-height: 0;
+  position: relative;
+  top: .2rem;
+  border: none;
+}
+.menu > li {
+  display: inline-block;
+  position: relative;
+  margin-right: 2rem;
+}
+.menu > li:hover ul {
+  display: block;
+}
+.submenu {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  border-top: none;
+  -webkit-box-shadow: 0 0 0.3rem -0.1rem #333333;
+  box-shadow: 0 0 0.3rem -0.1rem #333333;
+}
+.submenu li {
+  float: left;
+  width: 100%;
+  border-bottom: thin solid #4d4d4d;
+}
+.submenu a {
+  font-weight: normal;
+  padding: .5rem 1.5rem;
+  font-size: .95rem;
+  font-weight: 300;
+  color: #dddddd;
+  background-color: #333333;
+  white-space: nowrap;
+}
+.submenu a:hover {
+  background-color: #000000;
+  color: #eeeeee;
+}
 h1 {
-  font-size: 2em;
-  line-height: 1.25em;
+  font-size: 2rem;
+  line-height: 1.25rem;
   font-weight: 400;
   margin-bottom: .5em;
   font-family: Open Sans Condensed, serif;
@@ -154,7 +211,6 @@ h2 {
   line-height: 1.25em;
   font-weight: 300;
   margin-bottom: .5em;
-  color: red;
   font-family: Open Sans Condensed, serif;
 }
 h3 {
@@ -169,7 +225,6 @@ h4 {
   font-weight: 600;
   line-height: 1.5em;
   margin-bottom: .5em;
-  color: red;
 }
 h1 a,
 h2 a,
@@ -185,6 +240,10 @@ h4 a {
 }
 main {
   margin: 1.5em 0 3em;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 main p {
   margin-bottom: 1em;

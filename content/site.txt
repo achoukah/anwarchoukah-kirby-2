@@ -1,7 +1,15 @@
-Title: Kirby Starterkit
+Title: Anwar Choukah
 ----
-Author: Bastian Allgeier GmbH
+Subtitle: Graphic and web designer, CSS afficionado
 ----
-Description: This is Kirby's Starterkit.
+Author: Anwar Choukah
 ----
-Copyright: © 2009-(date: Year) (link: http://bastianallgeier.com text: Kirby)
+Description: Anwar Choukah's portfolio, CV, and blog. There will also be CSS, HTML, and tech reading lists.
+----
+Keywords: anwar choukah, graphic designer, web designer, typography, CSS, html, kirby
+----
+Copyright: 
+
+* [© 2013-(date: Year) Anwar Choukah](http://anwarchoukah.com "Anwar Choukah.com")
+* [My (mainly) comics Tumblr](http://anwarchoukah.tumblr.com "Anwar Choukah on Tumblr - Comics, music, and interesting stuff...")
+* <a href="https://twitter.com/achoukah" class="twitter-follow-button" data-show-count="false">Follow @achoukah</a>
