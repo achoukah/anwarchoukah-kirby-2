@@ -196,27 +196,28 @@
   }
 
 // HEADINGS
-  header{
-    h1 {
-      font-size: 2em;
-      line-height: 1.25em;
-      font-weight: 400;
-      margin-bottom: .5em;
-    }
 
-    h2 {
-      font-size: 2em;
-      line-height: 1.25em;
-      font-weight: 300;
-      margin-bottom: .5em;
-      color: red;
-    }
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: 400;
+    margin-bottom: .5em;
+    font-family: @headline;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: 300;
+    margin-bottom: .5em;
+    color: red;
+    font-family: @headline;
   }
   h3 {
     font-size: 1.4em;
     line-height: 1.5em;
     font-weight: 400;
     margin-bottom: .5em;
+    font-family: @headline;
   }
   h4 {
     font-size: 1.125em;
@@ -340,11 +341,10 @@
   and (min-device-width : 768px)
   and (max-device-width : 1024px) {
     @import "style-tablet.less";
-  }  
-
-  // remove Mobile Test
-  @media only screen and (max-width : 37rem) {
-    @import "style-small.less";
   }
+
+
+
+
 
 
