@@ -43,6 +43,11 @@
     @codefont:        Inconsolata, sans-serif;
     @icomoon:         icomoon, sans-serif;
 
+  // WIDTHS
+
+    @colwidth:        36rem;
+    @margin:          1rem;
+
   // SUPERVARIABLES
 
     @border-colour:   @grey-dk;
@@ -89,7 +94,7 @@
     box-sizing: border-box;
   }
   body {
-    margin: 0 auto;
+    margin: 0;
     font-size: 18px;
     line-height: 1.5;
     box-sizing: inherit;
@@ -119,11 +124,11 @@
 
   header {
     background-color: @grey-dk;
-    padding: 2rem 0;
+    padding: 2rem @margin;
     color: @grey-lt;
 
     h1, h2{
-      width: 50rem;
+      width: @colwidth;
       margin: 1rem auto;
       display: block;
     }
@@ -176,7 +181,7 @@
 // NAVIGATION
 
   .menu {
-    width: 50rem;
+    width: @colwidth;
     margin: auto;
     font-family: @headline;
     font-size: 1.3rem;
@@ -281,11 +286,13 @@
 // MAIN
 
   main {
-    margin: 1.5em 0 3em;
+    margin: 1.5rem auto 3rem;
     flex: 1;
+    
   }
   main p {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+
   }
   main img {
     margin-bottom: 20px;
@@ -295,6 +302,11 @@
     padding-top: 3em;
     border-top: 2px solid #ddd;
   }
+  .container {
+    margin: 0 @margin;
+    width: @colwidth;
+  }
+
 
 // PROJECT META
 
