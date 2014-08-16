@@ -7,6 +7,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-weight: 400;
 }
 article,
 aside,
@@ -79,63 +80,6 @@ header {
   padding: 2rem 1rem;
   color: #999999;
 }
-header h1,
-header h2 {
-  width: 36rem;
-  margin: 1rem auto;
-  display: block;
-}
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
-}
-header h1 a {
-  margin: 0;
-  width: auto;
-  display: inline-block;
-}
-header h1 a:hover {
-  color: #dddddd;
-}
-header h1 a::before,
-header h1 a::after {
-  width: 100%+2rem;
-  clear: both;
-  opacity: 0;
-  border-top: medium solid #666666;
-  display: block;
-  content: '';
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  margin: 0 -1rem;
-}
-header h1 a::before {
-  -webkit-transform: translateY(-2rem);
-  -ms-transform: translateY(-2rem);
-  transform: translateY(-2rem);
-}
-header h1 a::after {
-  -webkit-transform: translateY(2rem);
-  -ms-transform: translateY(2rem);
-  transform: translateY(2rem);
-}
-header h1 a:hover::before,
-header h1 a:hover::after {
-  opacity: 1;
-}
-header h1 a:hover::before {
-  -webkit-transform: translateY(2.8rem);
-  -ms-transform: translateY(2.8rem);
-  transform: translateY(2.8rem);
-}
-header h1 a:hover::after {
-  -webkit-transform: translateY(-2.6rem);
-  -ms-transform: translateY(-2.6rem);
-  transform: translateY(-2.6rem);
-}
-header h2 {
-  font-size: 1.5rem;
-}
 .branding {
   float: left;
   margin-bottom: 1.5rem;
@@ -199,38 +143,82 @@ header h2 {
   background-color: #000000;
   color: #eeeeee;
 }
-h1 {
-  font-size: 2rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-  margin-bottom: .5em;
+header h1,
+header h2 {
+  width: 36rem;
+  margin: auto;
+  display: block;
   font-family: Open Sans Condensed, serif;
 }
-h2 {
-  font-size: 2em;
-  line-height: 1.25em;
-  font-weight: 300;
-  margin-bottom: .5em;
-  font-family: Open Sans Condensed, serif;
+header h1 {
+  font-size: 3rem;
 }
-h3 {
-  font-size: 1.4em;
-  line-height: 1.5em;
-  font-weight: 400;
-  margin-bottom: .5em;
-  font-family: Open Sans Condensed, serif;
+header h1 a {
+  margin: 0;
+  width: auto;
+  display: inline-block;
 }
-h4 {
-  font-size: 1.125em;
-  font-weight: 600;
-  line-height: 1.5em;
-  margin-bottom: .5em;
+header h1 a:hover {
+  color: #dddddd;
 }
-h1 a,
-h2 a,
-h3 a,
-h4 a {
+header h1 a::before,
+header h1 a::after {
+  width: 100%+2rem;
+  clear: both;
+  opacity: 0;
+  border-top: medium solid #666666;
+  display: block;
+  content: '';
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 0 -1rem;
+}
+header h1 a::before {
+  -webkit-transform: translateY(-2rem);
+  -ms-transform: translateY(-2rem);
+  transform: translateY(-2rem);
+}
+header h1 a::after {
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+}
+header h1 a:hover::before,
+header h1 a:hover::after {
+  opacity: 1;
+}
+header h1 a:hover::before {
+  -webkit-transform: translateY(4.4rem);
+  -ms-transform: translateY(4.4rem);
+  transform: translateY(4.4rem);
+}
+header h1 a:hover::after {
+  -webkit-transform: translateY(-4rem);
+  -ms-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+header h2 {
+  font-size: 1.5rem;
+}
+header h1 a,
+header h2 a,
+header h3 a,
+header h4 a {
   color: inherit;
+}
+.container h1,
+.container h2,
+.container h3,
+.container h4 {
+  border-bottom: thin solid #dddddd;
+  font-family: Open Sans Condensed, serif;
+  margin-bottom: 1rem;
+}
+.container h1 {
+  font-size: 2.5rem;
+}
+.container h2 {
+  font-size: 2rem;
 }
 .btn {
   display: inline-block;
@@ -260,6 +248,13 @@ section {
   margin: 0 1rem;
   width: 36rem;
 }
+.container ul li::before {
+  content: '\e61d';
+  font-family: icomoon, sans-serif;
+  color: #930000;
+  font-size: .8rem;
+  padding-right: .4rem;
+}
 .meta {
   width: 100%;
   margin: 0 0 1em 0;
@@ -283,11 +278,11 @@ section {
   width: 30%;
   margin-left: 5%;
 }
+.teaser li::before {
+  display: none;
+}
 .teaser li:first-child {
   margin-left: 0;
-}
-.teaser a {
-  color: red;
 }
 .nextprev {
   padding: 1em 0;

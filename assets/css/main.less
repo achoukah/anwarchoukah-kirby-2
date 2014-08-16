@@ -20,9 +20,9 @@
     @red-lt:          lighten(@red,10%);
     @red-dk:          darken(@red,10%);
 
-    @rebecca:         #663399;
-    @rebecca-lt:      lighten(@rebecca,20%);
-    @rebecca-dk:      darken(@rebecca,20%);
+    @green:         #326332;
+    @green-lt:      lighten(@green,20%);
+    @green-dk:      darken(@green,20%);
 
     @grey:            #666666;
     @grey-lt:         lighten(@grey,20%);
@@ -64,6 +64,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-weight: 400;
   }
   article, aside, details, figcaption, figure,
   footer, header, hgroup, main, nav, section, summary {
@@ -126,52 +127,6 @@
     background-color: @grey-dk;
     padding: 2rem @margin;
     color: @grey-lt;
-
-    h1, h2{
-      width: @colwidth;
-      margin: 1rem auto;
-      display: block;
-    }
-    h1{
-      font-size: 3rem;
-      margin-bottom: 2.5rem;
-      a{
-        margin: 0;
-        width: auto;
-        display: inline-block;
-      }
-      a:hover{
-        color: @white-dk;
-      }
-      a::before, a::after{
-        width: 100%+2rem;
-        clear: both;
-        opacity: 0;
-        border-top: medium solid @grey;
-        display: block;
-        content: '';
-        transition: all .2s ease-in-out;
-        margin: 0 -1rem;
-      }
-      a::before{
-        transform: translateY(-2rem);
-      }
-      a::after{
-        transform: translateY(2rem);
-      }
-      a:hover::before, a:hover::after{
-        opacity: 1;
-      }
-      a:hover::before{
-        transform: translateY(2.8rem);
-      }
-      a:hover::after{
-        transform: translateY(-2.6rem);
-      }
-    }
-    h2{
-      font-size: 1.5rem;
-    }
   }
   .branding {
     float: left;
@@ -242,36 +197,69 @@
   }
 
 // HEADINGS
+  header{
+    h1, h2{
+      width: @colwidth;
+      margin: auto;
+      display: block;
+      font-family: @headline;
+    }
+    h1{
+      font-size: 3rem;
 
-  h1 {
-    font-size: 2rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-    margin-bottom: .5em;
-    font-family: @headline;
+      a{
+        margin: 0;
+        width: auto;
+        display: inline-block;
+      }
+      a:hover{
+        color: @white-dk;
+      }
+      a::before, a::after{
+        width: 100%+2rem;
+        clear: both;
+        opacity: 0;
+        border-top: medium solid @grey;
+        display: block;
+        content: '';
+        transition: all .2s ease-in-out;
+        margin: 0 -1rem;
+      }
+      a::before{
+        transform: translateY(-2rem);
+      }
+      a::after{
+        transform: translateY(2rem);
+      }
+      a:hover::before, a:hover::after{
+        opacity: 1;
+      }
+      a:hover::before{
+        transform: translateY(4.4rem);
+      }
+      a:hover::after{
+        transform: translateY(-4rem);
+      }
+    }
+    h2{
+      font-size: 1.5rem;
+    }
+    h1 a, h2 a, h3 a, h4 a {
+      color: inherit;
+    }
   }
-  h2 {
-    font-size: 2em;
-    line-height: 1.25em;
-    font-weight: 300;
-    margin-bottom: .5em;
-    font-family: @headline;
-  }
-  h3 {
-    font-size: 1.4em;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin-bottom: .5em;
-    font-family: @headline;
-  }
-  h4 {
-    font-size: 1.125em;
-    font-weight: 600;
-    line-height: 1.5em;
-    margin-bottom: .5em;
-  }
-  h1 a, h2 a, h3 a, h4 a {
-    color: inherit;
+  .container{
+    h1, h2, h3, h4 {
+      border-bottom: thin solid @white-dk;
+      font-family: @headline;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
   }
 
 // BUTTONS
@@ -288,7 +276,6 @@
   main {
     margin: 1.5rem auto 3rem;
     flex: 1;
-    
   }
   main p {
     margin-bottom: 1rem;
@@ -305,6 +292,19 @@
   .container {
     margin: 0 @margin;
     width: @colwidth;
+
+    ul{
+      li{
+
+      }
+      li::before{
+        content: '\e61d';
+        font-family: @icomoon;
+        color: @red;
+        font-size: .8rem;
+        padding-right: .4rem;
+      }
+    }
   }
 
 // PROJECT META
@@ -335,11 +335,11 @@
     width: 30%;
     margin-left: 5%;
   }
+  .teaser li::before{
+    display: none;
+  }
   .teaser li:first-child {
     margin-left: 0;
-  }
-  .teaser a {
-    color: red;
   }
 
 // NEXTPREV NAV
