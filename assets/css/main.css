@@ -299,10 +299,32 @@ section {
   float: right;
 }
 footer {
-  padding: 1em 0 6em;
-  font-size: .8em;
-  color: #222;
-  border-top: 2px solid red;
+  width: 100%;
+  background: #333333;
+  padding: 2rem 0;
+  margin: 2rem 0 0 0;
+  clear: both;
+  color: #999999;
+  font-size: .9rem;
+  text-align: center;
+}
+footer a {
+  color: #dddddd;
+}
+footer ul {
+  width: 36rem;
+  padding: 0 1rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer li {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
 }
 img {
   display: block;

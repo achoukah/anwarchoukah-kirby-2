@@ -307,7 +307,6 @@
     width: @colwidth;
   }
 
-
 // PROJECT META
 
   .meta {
@@ -358,10 +357,26 @@
 // FOOTER
 
   footer {
-  padding: 1em 0 6em;
-  font-size: .8em;
-  color: #222;
-  border-top: 2px solid red;
+    width: 100%;
+    background: @grey-dk;
+    padding: 2rem 0;
+    margin: 2rem 0 0 0;
+    clear: both;
+    color: @grey-lt;
+    font-size: .9rem;
+    text-align: center;
+    a{
+      color: @white-dk;
+    }
+    ul{
+      width: @colwidth;
+      padding: 0 @margin;
+      margin: auto;
+      display: flex;
+    }
+    li{
+      flex: auto;
+    }
   }
 
 // PIX
