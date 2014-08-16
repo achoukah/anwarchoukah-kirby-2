@@ -115,15 +115,20 @@ header {
   margin-right: 2rem;
 }
 .menu > li:hover ul {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .submenu {
   position: absolute;
+  left: -1rem;
   z-index: 999;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-top: none;
-  -webkit-box-shadow: 0 0 0.3rem -0.1rem #333333;
-  box-shadow: 0 0 0.3rem -0.1rem #333333;
+  -webkit-box-shadow: 0 0 0.4rem -0.1rem #000000;
+  box-shadow: 0 0 0.4rem -0.1rem #000000;
 }
 .submenu li {
   float: left;
@@ -140,7 +145,7 @@ header {
   white-space: nowrap;
 }
 .submenu a:hover {
-  background-color: #000000;
+  background-color: #4d4d4d;
   color: #eeeeee;
 }
 header h1,
@@ -277,6 +282,13 @@ section {
   float: left;
   width: 30%;
   margin-left: 5%;
+}
+.teaser li h3 {
+  font-family: Playfair Display, sans-serif;
+  font-size: 1rem;
+}
+.teaser li p {
+  font-size: .9rem;
 }
 .teaser li::before {
   display: none;

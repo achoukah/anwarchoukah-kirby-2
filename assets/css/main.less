@@ -167,14 +167,18 @@
     margin-right: 2rem;
   }
   .menu > li:hover ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .submenu {
     position: absolute;
+    left: -1rem;
     z-index: 999;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
     border-top: none;
-    box-shadow: 0 0 .3rem -.1rem @black;
+    box-shadow: 0 0 .4rem -.1rem @black-dk;
 
     li {
       float: left;
@@ -191,7 +195,7 @@
       white-space: nowrap;
     }
     a:hover {
-      background-color: @black-dk;
+      background-color: @black-lt;
       color: @white;
     }
   }
@@ -329,17 +333,26 @@
   .teaser {
     list-style: none;
     margin-left: 0;
-  }
-  .teaser li {
-    float: left;
-    width: 30%;
-    margin-left: 5%;
-  }
-  .teaser li::before{
-    display: none;
-  }
-  .teaser li:first-child {
-    margin-left: 0;
+
+    li {
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+
+      h3{
+        font-family: @bodytext;
+        font-size: 1rem;
+      }
+      p{
+        font-size: .9rem;
+      }
+    }
+      li::before{
+      display: none;
+    }
+      li:first-child {
+      margin-left: 0;
+    }
   }
 
 // NEXTPREV NAV
