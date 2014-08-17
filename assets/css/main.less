@@ -96,8 +96,8 @@
   }
   body {
     margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.8;
     box-sizing: inherit;
 
     background: @bg-colour;
@@ -311,6 +311,34 @@
     }
   }
 
+// GALLERY
+
+  .gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+
+    li{
+      flex: auto;
+      text-align: center;
+      display: flex;
+      flex-grow: 1;
+
+
+      img{
+          width: 6rem;
+          height: auto;
+      }
+    }
+    li::before{
+      display: none;
+    }
+    li:hover{
+      
+    }
+  }
 // PROJECT META
 
   .meta {
